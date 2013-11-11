@@ -1,0 +1,715 @@
+2013/10/24 05:43:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scheduler/
+---
+2013/10/24 05:43:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scheduler/
+---
+2013/10/24 05:45:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\apps\xampp\htdocs\schedular\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/schedular/
+---
+2013/10/24 05:45:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scheduler/
+---
+2013/10/24 05:46:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scheduler/
+---
+2013/10/24 05:46:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scheduler/
+---
+2013/10/24 05:46:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/scheduler/
+---
+2013/10/24 06:25:04 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:30:08 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:30:59 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:31:10 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:31:17 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:31:26 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:31:27 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:31:27 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:31:27 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:31:27 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:31:28 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:33:09 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:07 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:09 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:09 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:29 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:29 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:29 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:29 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:30 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:30 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:31 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:34:31 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:35:06 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:35:07 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:35:08 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:35:25 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:35:35 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:35:36 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:35:36 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:36:45 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:36:46 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:36:46 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:36:46 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:36:47 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:36:47 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:36:47 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:36:48 [error] [php] include(Controller.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(354): require()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (4)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:37:36 [error] [php] include(LoginForm.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(80): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (80)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:50:13 [error] [php] include(LoginForm.php): failed to open stream: No such file or directory (C:\apps\yii-1.1.14.f0fee9\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(80): spl_autoload_call()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php?r=site/login
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (80)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:52:35 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.breadcrumbs" is not defined.' in C:\apps\yii-1.1.14.f0fee9\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\apps\xampp\htdocs\scheduler\protected\views\site\login.php(7): CComponent->__set('breadcrumbs', Array)
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CBaseController.php(126): require('C:\apps\xampp\h...')
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\apps\xampp\h...', Array, true)
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(869): CBaseController->renderFile('C:\apps\xampp\h...', Array, true)
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#5 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#6 C:\apps\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#7 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('login')
+#11 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/scheduler/index.php?r=site/login
+---
+2013/10/24 06:55:58 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:56:23 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:57:27 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:58:19 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 06:58:41 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/10/24 07:03:51 [error] [php] Undefined index: r (C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php:11)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(178): CWebApplication->onBeginRequest()
+#1 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/index.php
+in C:\apps\xampp\htdocs\scheduler\protected\components\RequireLogin.php (11)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 04:58:04 [error] [Message Here...] 
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (34)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:00:38 [error] [exception.CException] exception 'CException' with message 'Property "Schedule.name" is not defined.' in C:\apps\yii-1.1.14.f0fee9\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name')
+#1 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(35): CActiveRecord->__get('name')
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#8 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/scheduler/
+---
+2013/11/11 05:00:48 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:01:22 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:06 [error] [php] log() expects parameter 1 to be double, string given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:27 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:28 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:28 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:28 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:28 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:28 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:29 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:29 [error] [php] log() expects at most 2 parameters, 3 given (C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php:35)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:36 [error] [DataProvider $record->theme] 
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:02:53 [error] [Shanti Shanti Shanti] 
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:03:07 [error] [] Shanti Shanti Shanti
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:03:42 [error] [] 2013-10-27
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:10:20 [error] [] 2013-10-27
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:10:20 [error] [php] Undefined variable: dataProvider (C:\apps\xampp\htdocs\scheduler\protected\views\site\index.php:15)
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php(38): SiteController->render()
+#3 C:\apps\yii-1.1.14.f0fee9\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\apps\xampp\htdocs\scheduler\index.php(13): CWebApplication->run()
+REQUEST_URI=/scheduler/
+in C:\apps\xampp\htdocs\scheduler\protected\views\site\index.php (15)
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (38)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:10:33 [error] [] 2013-10-27
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (35)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 05:18:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php:483
+Stack trace:
+#0 C:\apps\yii-1.1.14.f0fee9\framework\web\CController.php(270): CController->missingAction('view')
+#1 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(282): CController->run('view')
+#2 C:\apps\yii-1.1.14.f0fee9\framework\web\CWebApplication.php(141): CWebApplication->runController('site/view')
+#3 C:\apps\yii-1.1.14.f0fee9\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\apps\xampp\htdocs\scheduler\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/scheduler/index.php?r=site/view&id=1
+HTTP_REFERER=http://localhost/scheduler/
+---

@@ -1,0 +1,6 @@
+2013/11/11 04:55:07 [info] [application] test
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (34)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
+2013/11/11 04:56:23 [error] [Message Here...] 
+in C:\apps\xampp\htdocs\scheduler\protected\controllers\SiteController.php (34)
+in C:\apps\xampp\htdocs\scheduler\index.php (13)
