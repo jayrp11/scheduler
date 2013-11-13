@@ -1,5 +1,3 @@
-
-
 <h3 class="table-header">Future</h3>
 <table class="table table-striped table-bordered">
 	<thead>
@@ -17,7 +15,7 @@
 		?>
 				<tr>
 					<td><?php echo CHtml::encode($record->s_date); ?></td>
-					<td><?php echo CHtml::encode($record->theme); ?></td>
+					<td><?php echo CHtml::link(CHtml::encode($record->theme), array('view', 'id'=>$record->id)); ?></td>
 					<td>1:40</td>
 				</tr>
 		<?php

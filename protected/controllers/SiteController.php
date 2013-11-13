@@ -35,6 +35,13 @@ class SiteController extends CController
 			'dataProvider'=>$dataProvider,
 		));
 	}
+	
+	public function actionView($id)
+	{
+		$this->render('view',array(
+			'model'=>$this->loadModel($id),
+		));
+	}
 
 	/**
 	 * This is the action to handle external exceptions.
@@ -49,31 +56,33 @@ class SiteController extends CController
 				$this->render('error', $error);
 		}
 	}
-
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
+	
+	public function actionCreate()
 	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-Type: text/plain; charset=UTF-8";
+		$model=new Schedule;
+		//$subs=new SubSchedule;
+		
+		//$enable_add_more_subs = true;
 
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
+		if(isset($_POST['Schedule']))
+		{
+			$model->attributes=$_POST['Schedule'];
+			
+			if (isset($_POST['SubSchedule']))
+            {
+                $model->sub_schedules = $_POST['SubSchedule'];
+            }
+            if ($model->saveWithRelated('sub_schedules'))
+                $this->redirect(array('view', 'id' => $model->id));
+            else
+                $model->addError('children', 'Error occured while saving children.');
 		}
-		$this->render('contact',array('model'=>$model));
+
+		$this->render('create',array(
+			'model'=>$model,
+			//'subs'=>(isset($subs_to_save)) ? $subs_to_save : array(new SubSchedule('insert')),
+			//'enable_add_more_subs' => $enable_add_more_subs,
+		));
 	}
 
 	/**
@@ -110,4 +119,22 @@ class SiteController extends CController
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+	
+	public function loadModel($id)
+	{
+		$model=Schedule::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+	
+	public function actionLoadChildByAjax($index)
+    {
+        $model = new SubSchedule;
+        $this->renderPartial('sub_schedule/_form', array(
+            'model' => $model,
+            'index' => $index,
+//            'display' => 'block',
+        ), false, true);
+    }
 }
