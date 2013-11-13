@@ -38,7 +38,7 @@ insert into schedules(s_date, theme) values('2013-10-20', 'Yogi Vani');
 insert into schedules(s_date, theme) values('2013-10-27', 'Shanti Shanti Shanti');
 
 insert into sub_schedules(schedule_id, start_time, end_time, title, lead, presenter) 
-			values(1, '2013-10-27 04:30:00', '2013-10-27 04:40:00', 'Dhun', 'Test Lead - 1', 'Test Presenter - 1');
+			values(1, '2013-10-27 04:30:00', '2013-10-27 04:40:00', 'Dhun - 2', 'Test Lead - 2', 'Test Presenter - 2');
 
 select * from schedules;
 select * from sub_schedules;
