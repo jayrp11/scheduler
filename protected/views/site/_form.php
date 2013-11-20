@@ -4,10 +4,11 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="form">
+<div class="	">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'schedule-form',
+	'htmlOptions'=>array('role'=>'form'),
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -17,16 +18,24 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'theme'); ?>
-		<?php echo $form->textField($model,'theme',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'username'); ?>
+	<div class="form-group">
+		<?php echo $form->textField(
+			$model,
+			'theme',
+			array('size'=>50, 
+				'maxlength'=>50, 
+				'class'=>'form-control input-lg',
+				'placeholder'=>'Title')); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'s_date'); ?>
-		<?php echo $form->textField($model,'s_date',array('size'=>50,'maxlength'=>50)); ?>
-		<?php echo $form->error($model,'s_date'); ?>
+	<div class="form-group">
+		<?php echo $form->textField(
+			$model,
+			's_date',
+			array('size'=>50, 
+				'maxlength'=>50, 
+				'class'=>'form-control',
+				'placeholder'=>'Date')); ?>
 	</div>
 	
 	<div>
@@ -48,8 +57,8 @@
 		</div>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form-group">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
@@ -66,7 +75,7 @@ $("#loadChildByAjax").click(function(e){
         url: _url,
         success:function(response){
             $("#children").append(response);
-            $("#children .crow").last().animate({
+            $("#children .sub-form").last().animate({
                 opacity : 1, 
                 left: "+50", 
                 height: "toggle"

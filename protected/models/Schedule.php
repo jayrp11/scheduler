@@ -33,4 +33,12 @@ class Schedule extends CActiveRecord
                 'class' => 'application.components.ESaveRelatedBehavior')
         );
     }
+	
+	public function attributeLabels()
+    {
+        return array(
+            'theme' => 'Theme',
+            's_date' => 'Date',
+        );
+    }
 }

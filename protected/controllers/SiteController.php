@@ -84,6 +84,36 @@ class SiteController extends CController
 			//'enable_add_more_subs' => $enable_add_more_subs,
 		));
 	}
+	
+	/**
+     * Updates a particular model.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param integer $id the ID of the model to be updated
+     */
+    public function actionUpdate($id)
+    {
+        $model = $this->loadModel($id);
+ 
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+ 
+        if (isset($_POST['Father']))
+        {
+            $model->attributes = $_POST['Father'];
+            if (isset($_POST['Child']))
+            {
+                $model->children = $_POST['Child'];
+            }
+            if ($model->saveWithRelated('children'))
+                $this->redirect(array('view', 'id' => $model->id));
+            else
+                $model->addError('children', 'Error occured while saving children.');
+        }
+ 
+        $this->render('update', array(
+            'model' => $model,
+        ));
+    }
 
 	/**
 	 * Displays the login page
@@ -131,10 +161,15 @@ class SiteController extends CController
 	public function actionLoadChildByAjax($index)
     {
         $model = new SubSchedule;
+		
+		// Yii::log('', CLogger::LEVEL_ERROR, 'SubSchedule.endDate' . $model->end_time);
+		
+		$model->start_time = '';
+		$model->end_time = '';
+		
         $this->renderPartial('sub_schedule/_form', array(
             'model' => $model,
             'index' => $index,
-//            'display' => 'block',
         ), false, true);
     }
 }
