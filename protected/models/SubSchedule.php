@@ -27,4 +27,5 @@ class SubSchedule extends CActiveRecord
 			'schedules'=>array(self::BELONGS_TO, 'Schedule', 'schedule_id'),
 		);
 	}
+
 }

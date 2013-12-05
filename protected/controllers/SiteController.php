@@ -57,12 +57,41 @@ class SiteController extends CController
 		}
 	}
 	
+	public function convertToDate($s_date, $sub_schedules)
+	{
+		// Yii::log('SubSchedule.endDate', CLogger::LEVEL_ERROR, 'Model');
+		// echo('<pre>'); print_r($sub_schedules); echo('</pre>');
+		
+		//Yii::log($sub_schedules['s_date'], CLogger::LEVEL_ERROR, 'Model');
+		//$s_date = $sub_schedules['s_date'];
+
+		$ss = array();
+		foreach($sub_schedules as $key => $sub)
+		{
+			// TODO: improve below logic
+			// Yii::log(serialize($sub), CLogger::LEVEL_ERROR, 'sub - before');
+			$start_time = new DateTime($s_date);
+			$time = explode(':', $sub['start_time']);
+			$start_time->setTime(intval($time[0]), intval($time[1]));
+			Yii::log($start_time->format('Y-m-d H:i:s'), CLogger::LEVEL_ERROR, 'Model');
+			$sub_schedules[$key]['start_time']=$start_time->format('Y-m-d H:i:s');
+			
+			$end_time = new DateTime($s_date);
+			$time = explode(':', $sub['end_time']);
+			$end_time->setTime(intval($time[0]), intval($time[1]));
+			Yii::log($end_time->format('Y-m-d H:i:s'), CLogger::LEVEL_ERROR, 'Model');
+			$sub_schedules[$key]['end_time']=$end_time->format('Y-m-d H:i:s');
+			
+			//Yii::log(serialize($sub), CLogger::LEVEL_ERROR, 'sub - after');
+		}
+		Yii::log(serialize($sub_schedules), CLogger::LEVEL_ERROR, '$sub_schedules');
+		
+		return $sub_schedules;
+	}
+	
 	public function actionCreate()
 	{
 		$model=new Schedule;
-		//$subs=new SubSchedule;
-		
-		//$enable_add_more_subs = true;
 
 		if(isset($_POST['Schedule']))
 		{
@@ -70,7 +99,15 @@ class SiteController extends CController
 			
 			if (isset($_POST['SubSchedule']))
             {
-                $model->sub_schedules = $_POST['SubSchedule'];
+				Yii::log(serialize($_POST['SubSchedule']), CLogger::LEVEL_ERROR, 'SubSchedule');
+				$ss = $this->convertToDate($model['s_date'], $_POST['SubSchedule']);
+				Yii::log(serialize($ss), CLogger::LEVEL_ERROR, 'SubSchedule');
+				$model->sub_schedules = $ss;
+				Yii::log(serialize($model->sub_schedules), CLogger::LEVEL_ERROR, 'Model');
+				
+				//Yii::log(serialize($_POST['SubSchedule']), CLogger::LEVEL_ERROR, 'Model');
+                //$model->sub_schedules = $_POST['SubSchedule'];
+				//Yii::log(serialize($model->sub_schedules), CLogger::LEVEL_ERROR, 'Model');
             }
             if ($model->saveWithRelated('sub_schedules'))
                 $this->redirect(array('view', 'id' => $model->id));
@@ -80,8 +117,6 @@ class SiteController extends CController
 
 		$this->render('create',array(
 			'model'=>$model,
-			//'subs'=>(isset($subs_to_save)) ? $subs_to_save : array(new SubSchedule('insert')),
-			//'enable_add_more_subs' => $enable_add_more_subs,
 		));
 	}
 	
