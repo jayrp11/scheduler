@@ -62,6 +62,25 @@
 						'class'=>'form-control',
 						'placeholder'=>'Presenter')); ?>
 			</div>
+			
+			<div>
+				<?php
+				echo CHtml::link('Add Child', '#', array('id' => 'loadChildByAjax'));
+				?>
+				<div id="children">
+					<?php
+					$rindex = 0;
+					foreach ($model->resources as $id => $child):
+						$this->renderPartial('resource/_form', array(
+							'model' => $child,
+							'index' => $id,
+							'display' => 'block'
+						));
+						$rindex++;
+					endforeach;
+					?>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

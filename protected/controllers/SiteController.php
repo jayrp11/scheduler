@@ -88,7 +88,7 @@ class SiteController extends CController
 		
 		return $sub_schedules;
 	}
-	
+	/*
 	public function actionCreate()
 	{
 		$model=new Schedule;
@@ -117,6 +117,45 @@ class SiteController extends CController
 
 		$this->render('create',array(
 			'model'=>$model,
+		));
+	}
+	*/
+	
+	public function actionCreate()
+	{
+		$schedule=new Schedule();
+		
+		if(isset($_POST['Schedule']))
+		{
+			$schedule->attributes=$_POST['Schedule'];
+			
+			if (isset($_POST['SubSchedule']))
+			{
+				$sub_schedules = $this->convertToDate($schedule['s_date'], $_POST['SubSchedule']);
+				
+				$ss = array();
+				foreach($sub_schedules as $sub)
+				{
+					$sub_model=new SubSchedule();
+					$sub_model->attributes=$sub;
+					array_push($ss, $sub_model);
+				}
+				
+				$schedule->sub_schedules=$ss;
+			}
+			
+			$is_saved=$schedule->withRelated->save(true,array(
+				'sub_schedules',
+			));
+			
+			if($is_saved)
+				$this->redirect(array('view', 'id' => $schedule->id));
+			else
+				$model->addError('children', 'Error occured while saving.');
+		}
+		
+		$this->render('create',array(
+			'model'=>$schedule,
 		));
 	}
 	

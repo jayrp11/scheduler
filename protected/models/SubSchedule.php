@@ -25,7 +25,7 @@ class SubSchedule extends CActiveRecord
 	{
 		return array(
 			'schedules'=>array(self::BELONGS_TO, 'Schedule', 'schedule_id'),
+			'resources'=>array(self::MANY_MANY, 'Resource', 'sub_schedules_resources(sub_schedule_id, resource_id)'),
 		);
 	}
-
 }

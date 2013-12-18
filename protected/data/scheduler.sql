@@ -16,3 +16,10 @@ SET FOREIGN_KEY_CHECKS=1;
 
 truncate schedules;
 truncate sub_schedules;
+
+use scheduler;
+
+insert into resources(type, name) values('MUSIC', 'Keyboard');
+insert into resources(type, name) values('MUSIC', 'Harmonium');
+insert into resources(type, name) values('MUSIC', 'Khanzari');
+insert into resources(type, name) values('MUSIC', 'Manjira');

@@ -27,12 +27,23 @@ class Schedule extends CActiveRecord
 		);
 	}
 	
+	/*
 	public function behaviors()
     {
         return array('ESaveRelatedBehavior' => array(
                 'class' => 'application.components.ESaveRelatedBehavior')
         );
     }
+	*/
+	
+	public function behaviors() 
+	{
+		return array(
+			'withRelated'=>array(
+				'class'=>'application.components.WithRelatedBehavior'
+			),
+		);
+	}
 	
 	public function attributeLabels()
     {
