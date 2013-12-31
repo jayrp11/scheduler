@@ -3,6 +3,10 @@
 /* @var int $counter */
 ?>
 <div style="display: <?php echo!empty($display) ? $display : 'none'; ?>;" class="sub-form">
+	<div class="row-fluid"> 
+		<?php echo CHtml::button('Delete', array('class'=>'btn btn-default del-sub')); ?>
+	</div>
+	
 	<div class="row-fluid">
 		<div class="span2">
 			<div class="form-group">

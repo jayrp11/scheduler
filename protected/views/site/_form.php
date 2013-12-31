@@ -63,7 +63,7 @@
 		<?php echo CHtml::link('Add Schedule', '#', array('id' => 'loadChildByAjax')); ?>
 	</div>
 
-	<div class="controls"> 
+	<div class="row-fluid"> 
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
 	</div>
 	

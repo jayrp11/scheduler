@@ -7,7 +7,7 @@
 				CHtml::listData( Resource::model()->findAll(), 'id', 'name' ),
 				array(
 					'class'=>'select-box',
-				)); ?>
+				)); ?><i class="icon-remove del-res"></i>
 		</div>
 	</div>
 <?php /* </div> */ ?>
