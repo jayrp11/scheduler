@@ -3,53 +3,53 @@
 /* @var int $counter */
 ?>
 <div style="display: <?php echo!empty($display) ? $display : 'none'; ?>;" class="sub-form">
-	<div class="row">
-		<div class="col-md-4">
+	<div class="row-fluid">
+		<div class="span2">
 			<div class="form-group">
 				<?php echo CHtml::activeTextField(
 					$model, 
 					'[' . $index . ']start_time', 
 					array('size' => 20, 
 						'maxlength' => 255, 
-						'class'=>'form-control',
+						'class'=>'input-block-level',
 						'placeholder'=>'From')); ?>
 			</div>
 		</div>
 		
-		<div class="col-md-8">
+		<div class="span5">
 			<div class="form-group">
 				<?php echo CHtml::activeTextField(
 					$model, 
 					'[' . $index . ']title', 
 					array('size' => 20, 
 						'maxlength' => 255, 
-						'class'=>'form-control',
+						'class'=>'input-block-level',
 						'placeholder'=>'Activty title')); ?>
 			</div>
 		</div>
 	</div>
  
-	<div class="row">
-		<div class="col-md-4">
+	<div class="row-fluid">
+		<div class="span2">
 			<div class="form-group">
 				<?php echo CHtml::activeTextField(
 					$model, 
 					'[' . $index . ']end_time', 
 					array('size' => 20, 
 						'maxlength' => 255, 
-						'class'=>'form-control',
+						'class'=>'input-block-level',
 						'placeholder'=>'To')); ?>
 			</div>
 		</div>
 		
-		<div class="col-md-8">
+		<div class="span4">
 			<div class="form-group">
 				<?php echo CHtml::activeTextField(
 					$model, 
 					'[' . $index . ']lead', 
 					array('size' => 20, 
 						'maxlength' => 255, 
-						'class'=>'form-control',
+						'class'=>'input-block-level',
 						'placeholder'=>'Lead Name')); ?>
 			</div>
 			
@@ -59,15 +59,20 @@
 					'[' . $index . ']presenter', 
 					array('size' => 20, 
 						'maxlength' => 255, 
-						'class'=>'form-control',
+						'class'=>'input-block-level',
 						'placeholder'=>'Presenter')); ?>
 			</div>
 			
+			<?php /*
+			$this->renderPartial('sub_schedule/resource/_form', array(
+				'model' => $model,
+				'index' => $index,
+				'display' => 'block'
+			));
+			*/ ?>
+			<?php /* */ ?>
 			<div>
-				<?php
-				echo CHtml::link('Add Child', '#', array('id' => 'loadChildByAjax'));
-				?>
-				<div id="children">
+				<div id="rchildren<?php echo $index ?>">
 					<?php
 					$rindex = 0;
 					foreach ($model->resources as $id => $child):
@@ -80,7 +85,33 @@
 					endforeach;
 					?>
 				</div>
+				<?php echo CHtml::link('Add Resource', '#', array('id' => 'loadResourceByAjax' . $index));	?>
 			</div>
+			<?php /* */ ?>
 		</div>
 	</div>
 </div>
+<?php
+
+Yii::app()->clientScript->registerScript('loadresource', '
+var _pindex' . $index . ' = ' . $index . ';
+var _rindex' . $index . ' = ' . $rindex . ';
+$("#loadResourceByAjax'. $index .'").click(function(e){
+    e.preventDefault();
+    var _url = "' . Yii::app()->controller->createUrl("loadResourceByAjax", array("load_for" => $this->action->id)) . '&index="+_pindex' . $index . '+"&rindex="+_rindex' . $index . ';
+    $.ajax({
+        url: _url,
+        success:function(response){
+            $("#rchildren'. $index .'").append(response);
+            $("#rchildren'. $index .' .sub-form").last().animate({
+                opacity : 1, 
+                left: "+50", 
+                height: "toggle"
+            });
+        }
+    });
+    _rindex' . $index . '++;
+});
+', CClientScript::POS_END);
+
+?>

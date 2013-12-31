@@ -55,3 +55,7 @@ body {
 #schedule-form {
 	margin-top: 20px;
 }
+
+.body input[type=text], .body select {
+	margin-bottom: 9px;
+}

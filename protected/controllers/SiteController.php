@@ -83,6 +83,7 @@ class SiteController extends CController
 			$sub_schedules[$key]['end_time']=$end_time->format('Y-m-d H:i:s');
 			
 			//Yii::log(serialize($sub), CLogger::LEVEL_ERROR, 'sub - after');
+			
 		}
 		Yii::log(serialize($sub_schedules), CLogger::LEVEL_ERROR, '$sub_schedules');
 		
@@ -123,13 +124,15 @@ class SiteController extends CController
 	
 	public function actionCreate()
 	{
+		Yii::log(serialize($_POST), CLogger::LEVEL_ERROR, '$_POST');
+		
 		$schedule=new Schedule();
 		
 		if(isset($_POST['Schedule']))
 		{
 			$schedule->attributes=$_POST['Schedule'];
 			
-			if (isset($_POST['SubSchedule']))
+			if(isset($_POST['SubSchedule']))
 			{
 				$sub_schedules = $this->convertToDate($schedule['s_date'], $_POST['SubSchedule']);
 				
@@ -138,14 +141,41 @@ class SiteController extends CController
 				{
 					$sub_model=new SubSchedule();
 					$sub_model->attributes=$sub;
+					
+					if(isset($sub['resources']))
+					{
+						Yii::log('>>>>>>>>>>>>>>>>>>>>>', CLogger::LEVEL_ERROR, '>>');
+						Yii::log(serialize($sub['resources']), CLogger::LEVEL_ERROR, 'resources');
+						
+						$resources = array();
+						foreach($sub['resources'] as $r)
+						{
+							$resource=Resource::model()->findByPk($r); // TODO: this will change to array
+							
+							Yii::log(serialize($resource), CLogger::LEVEL_ERROR, '$resource');
+							
+							array_push($resources, $resource);
+						}
+
+						//TODO: exception handling for non existing IDs
+						
+						$sub_model->resources=$resources;
+					}
+					
 					array_push($ss, $sub_model);
 				}
-				
+
+			
+				Yii::log(serialize($ss), CLogger::LEVEL_ERROR, '$ss');
+			
 				$schedule->sub_schedules=$ss;
 			}
 			
+			
 			$is_saved=$schedule->withRelated->save(true,array(
-				'sub_schedules',
+				'sub_schedules'=>array(
+					'resources',
+				),
 			));
 			
 			if($is_saved)
@@ -244,6 +274,18 @@ class SiteController extends CController
         $this->renderPartial('sub_schedule/_form', array(
             'model' => $model,
             'index' => $index,
+        ), false, true);
+    }
+	
+	public function actionLoadResourceByAjax($index, $rindex)
+    {
+		$model = new SubSchedule;
+		Yii::log($index . ' - ' . $rindex, CLogger::LEVEL_ERROR, '$index - $rindex');
+				
+        $this->renderPartial('sub_schedule/resource/_form', array(
+			'model' => $model,
+            'index' => $index,
+			'rindex' => $rindex,
         ), false, true);
     }
 }

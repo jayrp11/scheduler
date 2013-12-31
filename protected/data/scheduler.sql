@@ -9,6 +9,8 @@ insert into sub_schedules(schedule_id, start_time, end_time, title, lead, presen
 
 select * from schedules;
 select * from sub_schedules;
+select * from resources;
+select * from sub_schedules_resources;
 
 SET FOREIGN_KEY_CHECKS=0; 
 truncate schedules;
@@ -18,8 +20,3 @@ truncate schedules;
 truncate sub_schedules;
 
 use scheduler;
-
-insert into resources(type, name) values('MUSIC', 'Keyboard');
-insert into resources(type, name) values('MUSIC', 'Harmonium');
-insert into resources(type, name) values('MUSIC', 'Khanzari');
-insert into resources(type, name) values('MUSIC', 'Manjira');

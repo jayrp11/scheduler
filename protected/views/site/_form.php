@@ -4,11 +4,11 @@
 /* @var $form CActiveForm */
 ?>
 
-<div class="	">
+<div>
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'schedule-form',
-	'htmlOptions'=>array('role'=>'form'),
+	'htmlOptions'=>array('class'=>'form-horizontal'),
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -18,30 +18,35 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="form-group">
-		<?php echo $form->textField(
-			$model,
-			'theme',
-			array('size'=>50, 
-				'maxlength'=>50, 
-				'class'=>'form-control input-lg',
-				'placeholder'=>'Title')); ?>
+	<div class="row-fluid">
+		<div class="span7">
+			<?php echo $form->textField(
+				$model,
+				'theme',
+				array('size'=>50, 
+					'maxlength'=>50, 
+					'class'=>'input-block-level',
+					'placeholder'=>'Title')); ?>
+		</div>
 	</div>
 
-	<div class="form-group">
-		<?php echo $form->textField(
-			$model,
-			's_date',
-			array('size'=>50, 
-				'maxlength'=>50, 
-				'class'=>'form-control',
-				'placeholder'=>'Date')); ?>
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="input-append date" id="schedule-date">
+				<?php echo $form->textField(
+					$model,
+					's_date',
+					array('size'=>50, 
+						'maxlength'=>50, 
+						'class'=>'input-block-level',
+						'placeholder'=>'Date',
+						'autocomplete'=>'off')); ?>
+				<span class="add-on"><i class="icon-th"></i></span>
+			</div>
+		</div>
 	</div>
 	
 	<div>
-		<?php
-    echo CHtml::link('Add Child', '#', array('id' => 'loadChildByAjax'));
-    ?>
 		<div id="children">
 			<?php
 			$index = 0;
@@ -55,12 +60,13 @@
 			endforeach;
 			?>
 		</div>
+		<?php echo CHtml::link('Add Schedule', '#', array('id' => 'loadChildByAjax')); ?>
 	</div>
 
-	<div class="form-group">
+	<div class="controls"> 
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
 	</div>
-
+	
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
