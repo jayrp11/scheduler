@@ -89,38 +89,6 @@ class SiteController extends CController
 		
 		return $sub_schedules;
 	}
-	/*
-	public function actionCreate()
-	{
-		$model=new Schedule;
-
-		if(isset($_POST['Schedule']))
-		{
-			$model->attributes=$_POST['Schedule'];
-			
-			if (isset($_POST['SubSchedule']))
-            {
-				Yii::log(serialize($_POST['SubSchedule']), CLogger::LEVEL_ERROR, 'SubSchedule');
-				$ss = $this->convertToDate($model['s_date'], $_POST['SubSchedule']);
-				Yii::log(serialize($ss), CLogger::LEVEL_ERROR, 'SubSchedule');
-				$model->sub_schedules = $ss;
-				Yii::log(serialize($model->sub_schedules), CLogger::LEVEL_ERROR, 'Model');
-				
-				//Yii::log(serialize($_POST['SubSchedule']), CLogger::LEVEL_ERROR, 'Model');
-                //$model->sub_schedules = $_POST['SubSchedule'];
-				//Yii::log(serialize($model->sub_schedules), CLogger::LEVEL_ERROR, 'Model');
-            }
-            if ($model->saveWithRelated('sub_schedules'))
-                $this->redirect(array('view', 'id' => $model->id));
-            else
-                $model->addError('children', 'Error occured while saving children.');
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
-	*/
 	
 	public function actionCreate()
 	{

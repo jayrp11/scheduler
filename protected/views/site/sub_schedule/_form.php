@@ -67,22 +67,15 @@
 						'placeholder'=>'Presenter')); ?>
 			</div>
 			
-			<?php /*
-			$this->renderPartial('sub_schedule/resource/_form', array(
-				'model' => $model,
-				'index' => $index,
-				'display' => 'block'
-			));
-			*/ ?>
-			<?php /* */ ?>
 			<div>
 				<div id="rchildren<?php echo $index ?>">
 					<?php
 					$rindex = 0;
 					foreach ($model->resources as $id => $child):
-						$this->renderPartial('resource/_form', array(
+						$this->renderPartial('sub_schedule/resource/_form', array(
 							'model' => $child,
-							'index' => $id,
+							'index' => $index,
+							'rindex' => $rindex,
 							'display' => 'block'
 						));
 						$rindex++;
@@ -91,7 +84,6 @@
 				</div>
 				<?php echo CHtml::link('Add Resource', '#', array('id' => 'loadResourceByAjax' . $index));	?>
 			</div>
-			<?php /* */ ?>
 		</div>
 	</div>
 </div>
