@@ -185,6 +185,7 @@ class SiteController extends CController
 		if(isset($_POST['Schedule']))
 		{
 			$schedule->delete();
+			// TODO: creating new object. Can this be avoided.
 			$schedule = new Schedule();
 		
 			$schedule->attributes=$_POST['Schedule'];
