@@ -149,7 +149,7 @@ class SiteController extends CController
 			if($is_saved)
 				$this->redirect(array('view', 'id' => $schedule->id));
 			else
-				$model->addError('children', 'Error occured while saving.');
+				$schedule->addError('children', 'Error occured while saving.');
 		}
 		
 		$this->render('create',array(
@@ -164,26 +164,85 @@ class SiteController extends CController
      */
     public function actionUpdate($id)
     {
-        $model = $this->loadModel($id);
+        $schedule = $this->loadModel($id);
  
         // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
+        // $this->performAjaxValidation($schedule);
  
         if (isset($_POST['Father']))
         {
-            $model->attributes = $_POST['Father'];
+            $schedule->attributes = $_POST['Father'];
             if (isset($_POST['Child']))
             {
-                $model->children = $_POST['Child'];
+                $schedule->children = $_POST['Child'];
             }
-            if ($model->saveWithRelated('children'))
-                $this->redirect(array('view', 'id' => $model->id));
+            if ($schedule->saveWithRelated('children'))
+                $this->redirect(array('view', 'id' => $schedule->id));
             else
-                $model->addError('children', 'Error occured while saving children.');
+                $schedule->addError('children', 'Error occured while saving children.');
         }
  
+		if(isset($_POST['Schedule']))
+		{
+			$schedule->delete();
+			$schedule = new Schedule();
+		
+			$schedule->attributes=$_POST['Schedule'];
+			
+			if(isset($_POST['SubSchedule']))
+			{
+				$sub_schedules = $this->convertToDate($schedule['s_date'], $_POST['SubSchedule']);
+				
+				$ss = array();
+				foreach($sub_schedules as $sub)
+				{
+					$sub_model=new SubSchedule();
+					$sub_model->attributes=$sub;
+					
+					if(isset($sub['resources']))
+					{
+						Yii::log('>>>>>>>>>>>>>>>>>>>>>', CLogger::LEVEL_ERROR, '>>');
+						Yii::log(serialize($sub['resources']), CLogger::LEVEL_ERROR, 'resources');
+						
+						$resources = array();
+						foreach($sub['resources'] as $r)
+						{
+							$resource=Resource::model()->findByPk($r); // TODO: this will change to array
+							
+							Yii::log(serialize($resource), CLogger::LEVEL_ERROR, '$resource');
+							
+							array_push($resources, $resource);
+						}
+
+						//TODO: exception handling for non existing IDs
+						
+						$sub_model->resources=$resources;
+					}
+					
+					array_push($ss, $sub_model);
+				}
+
+			
+				Yii::log(serialize($ss), CLogger::LEVEL_ERROR, '$ss');
+			
+				$schedule->sub_schedules=$ss;
+			}
+			
+			
+			$is_saved=$schedule->withRelated->save(true,array(
+				'sub_schedules'=>array(
+					'resources',
+				),
+			));
+			
+			if($is_saved)
+				$this->redirect(array('view', 'id' => $schedule->id));
+			else
+				$schedule->addError('children', 'Error occured while saving.');
+		}
+			
         $this->render('update', array(
-            'model' => $model,
+            'model' => $schedule,
         ));
     }
 

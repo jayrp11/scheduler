@@ -23,14 +23,14 @@ create table sub_schedules (
   presenter varchar(50),
   lead varchar(50), /* this should be replaced by foreign key */
 
-  CONSTRAINT fk_schedule FOREIGN KEY (schedule_id) REFERENCES schedules(id)
+  CONSTRAINT fk_schedule FOREIGN KEY (schedule_id) REFERENCES schedules(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 create table sub_schedules_resources (
   sub_schedule_id int not null,
   resource_id int not null,
 
-  CONSTRAINT fk_sub_schedule FOREIGN KEY (sub_schedule_id) REFERENCES sub_schedules(id),
+  CONSTRAINT fk_sub_schedule FOREIGN KEY (sub_schedule_id) REFERENCES sub_schedules(id) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT fk_resource FOREIGN KEY (resource_id) REFERENCES resources(id)
 );
 

@@ -73,7 +73,7 @@
 					$rindex = 0;
 					foreach ($model->resources as $id => $child):
 						$this->renderPartial('sub_schedule/resource/_form', array(
-							'model' => $child,
+							'model' => $model,
 							'index' => $index,
 							'rindex' => $rindex,
 							'display' => 'block'
