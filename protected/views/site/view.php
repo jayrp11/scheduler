@@ -6,14 +6,13 @@
 		foreach($model->sub_schedules as $subs)
 		{
 	?>
-			<h3><?php echo CHtml::encode($subs->title) ?></h3>
+			<h3><span><?php echo date('H:i', strtotime($subs->start_time)) ?></span> to <span><?php echo date('H:i', strtotime($subs->end_time)) ?></span> <?php echo CHtml::encode($subs->title) ?></h3>
+			<div>Lead: <?php echo CHtml::encode($subs->lead) ?></div>
 			<div>
-				<span><?php echo date('H:i', strtotime($subs->start_time)) ?></span> to <span><?php echo date('H:i', strtotime($subs->end_time)) ?></span>
+				<span>Duration: <?php echo date_diff(new DateTime($subs->start_time), new DateTime($subs->end_time))->format('%i mins') ?></span>
 			</div>
-			
-			<div><?php echo CHtml::encode($subs->presenter) ?></div>
-			<div><?php echo CHtml::encode($subs->lead) ?></div>
-			
+			<div>Presenter: <?php echo CHtml::encode($subs->presenter) ?></div>
+
 			<?php 
 				foreach($subs->resources as $resource)
 				{
