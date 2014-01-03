@@ -60,11 +60,11 @@
 			endforeach;
 			?>
 		</div>
-		<?php echo CHtml::link('Add Schedule', '#', array('id' => 'loadChildByAjax')); ?>
+		<?php /* echo CHtml::link('Add Schedule', '#', array('id' => 'loadChildByAjax')); */ ?>
 	</div>
 
 	<div class="row-fluid"> 
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-default')); ?>
+		<a class="btn" href="#" id="loadChildByAjax"><i class="icon-list-alt"></i> Add Schedule</a> <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-primary')); ?>
 	</div>
 	
 <?php $this->endWidget(); ?>

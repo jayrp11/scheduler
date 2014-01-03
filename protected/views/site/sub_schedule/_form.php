@@ -3,11 +3,11 @@
 /* @var int $counter */
 ?>
 <div style="display: <?php echo!empty($display) ? $display : 'none'; ?>;" class="sub-form">
-	<div class="row-fluid"> 
-		<?php echo CHtml::button('Delete', array('class'=>'btn btn-default del-sub')); ?>
-	</div>
-	
 	<div class="row-fluid">
+		<div class="span1">
+			<button class="btn del-sub" type="button"><i class="icon-remove"></i></button>
+		</div>
+		
 		<div class="span2">
 			<div class="form-group">
 				<?php echo CHtml::activeTextField(
@@ -34,6 +34,7 @@
 	</div>
  
 	<div class="row-fluid">
+		<div class="span1"></div>
 		<div class="span2">
 			<div class="form-group">
 				<?php echo CHtml::activeTextField(
@@ -82,7 +83,8 @@
 					endforeach;
 					?>
 				</div>
-				<?php echo CHtml::link('Add Resource', '#', array('id' => 'loadResourceByAjax' . $index));	?>
+				<a class="btn" href="#" id="loadResourceByAjax<?php echo $index ?>"><i class="icon-tasks"></i> Add Resource</a>
+				<?php /* echo CHtml::link('Add Resource', '#', array('id' => 'loadResourceByAjax' . $index));	*/ ?>
 			</div>
 		</div>
 	</div>

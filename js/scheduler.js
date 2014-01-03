@@ -10,6 +10,6 @@ $(document).ready(function() {
 	});
 	
 	$('.body').on('click', ".del-res", function(e) {
-		$(this).closest(".row-fluid").remove();
+		$(this).closest(".resource").remove();
 	});
 });
