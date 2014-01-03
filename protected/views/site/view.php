@@ -25,3 +25,7 @@
 		}
 	?>
 </div>
+<div class="row-fluid"> 
+	<?php echo CHtml::link('<i class="icon-edit"></i> Edit',array('site/update', 'id'=>$model->id), array('class'=>'btn')); ?>
+	<?php echo CHtml::link('<i class="icon-home"></i> Home',array('site/index'), array('class'=>'btn')); ?>
+</div>

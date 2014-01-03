@@ -18,10 +18,6 @@
 		BAPS
 	</div>
   
-    <div>
-		<?php echo CHtml::link('Create',array('site/create')); ?>
-	</div>
-  
     <div class="content">
       <?php echo $content; ?>
 	</div>

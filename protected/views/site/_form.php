@@ -64,7 +64,9 @@
 	</div>
 
 	<div class="row-fluid"> 
-		<a class="btn" href="#" id="loadChildByAjax"><i class="icon-list-alt"></i> Add Schedule</a> <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-primary')); ?>
+		<a class="btn" href="#" id="loadChildByAjax"><i class="icon-list-alt"></i> Add Schedule</a>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-primary')); ?>
+		<?php echo CHtml::link('<i class="icon-home"></i> Home',array('site/index'), array('class'=>'btn')); ?>
 	</div>
 	
 <?php $this->endWidget(); ?>
