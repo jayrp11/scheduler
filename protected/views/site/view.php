@@ -1,7 +1,7 @@
 <div class="view">
 	<div class="row-fluid heading">
 		<h1 class="title"><?php echo CHtml::encode($model->theme) ?></h3>
-		<span><i class="icon-calendar"></i><span id="date"><?php echo date('d-m-Y', strtotime($model->s_date)) ?></span></span>
+		<span><i class="icon-calendar"></i><span id="date"><?php echo date('d M Y', strtotime($model->s_date)) ?></span></span>
 	</div>
 	<?php
 		foreach($model->sub_schedules as $subs)

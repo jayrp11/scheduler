@@ -15,7 +15,7 @@
 
   <div class="container body">
     <div class="header">
-		BAPS
+		
 	</div>
   
     <div class="content">

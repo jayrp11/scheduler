@@ -1,4 +1,4 @@
-<h3 class="table-header">Future</h3>
+<h3 class="table-header">Future schedules</h3>
 <table class="table table-striped table-bordered">
 	<thead>
 		<tr>
