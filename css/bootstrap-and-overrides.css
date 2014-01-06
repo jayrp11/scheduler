@@ -70,5 +70,62 @@ body {
 }
 
 .view {
-	padding-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.view .heading {
+  margin-bottom: 20px;
+}
+
+.view #date {
+  padding-left: 5px;
+}
+
+.title {
+  border-bottom: 3px solid #666666;
+}
+
+.schedule {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.time-frame {
+  float: left;
+}
+
+.time-frame div{
+  font-size: 24px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.time-frame div.from {
+  -webkit-border-radius: 4px 4px 0 0;
+  border-bottom:none;
+}
+
+.time-frame div.to {
+  -webkit-border-radius: 0 0 4px 4px;
+}
+
+.details {
+  float: left;
+  padding-left: 15px;
+}
+
+.details .sub-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.duration, .presenter, .leaded-by {
+  padding-bottom: 3px;
+}
+
+.leaded-by span {
+  font-style: italic;
 }
