@@ -129,3 +129,7 @@ body {
 .leaded-by span {
   font-style: italic;
 }
+
+.buttons {
+  padding-bottom: 20px;
+}

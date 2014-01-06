@@ -63,7 +63,7 @@
 		<?php /* echo CHtml::link('Add Schedule', '#', array('id' => 'loadChildByAjax')); */ ?>
 	</div>
 
-	<div class="row-fluid"> 
+	<div class="row-fluid buttons"> 
 		<a class="btn" href="#" id="loadChildByAjax"><i class="icon-list-alt"></i> Add Schedule</a>
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-primary')); ?>
 		<?php echo CHtml::link('<i class="icon-home"></i> Home',array('site/index'), array('class'=>'btn')); ?>
