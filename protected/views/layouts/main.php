@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +10,16 @@
   <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/datepicker.css" media="screen, projection" />
   <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-and-overrides.css" media="screen, projection" />
 </head>
-
 <body>
-
   <div class="container body">
     <div class="header">
 		
 	</div>
   
     <div class="content">
-      <?php echo $content; ?>
+		<div class="row">
+			<?php echo $content; ?>
+		</div>
 	</div>
 	
 	<div class="footer text-center">

@@ -24,6 +24,6 @@
 	<tbody>
 </table>
 
-<div class="row-fluid"> 
-	<?php echo CHtml::link('<i class="icon-th-list"></i> New Schedule',array('site/create'), array('class'=>'btn')); ?>
+<div>
+	<?php echo CHtml::link('<span class="glyphicon glyphicon-list"></span> New Schedule',array('site/create'), array('class'=>'btn btn-default')); ?>
 </div>
