@@ -1,9 +1,8 @@
 $(document).ready(function() {
-	/*$('#schedule-date').datepicker({
+	$('#schedule-date input, #schedule-date input-group-addon').datepicker({
 		format: "yyyy-mm-dd",
-		calendarWeeks: true
-	});*/
-	
+		autoclose: true,
+	});
 	
 	$('.body').on('click', ".del-sub", function(e) {
 		$(this).closest(".sub-form").remove();

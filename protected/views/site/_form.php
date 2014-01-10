@@ -29,7 +29,7 @@
 	</div>
 
 	<div class="form-group">
-		<div class="input-group" id="schedule-date">
+		<div class="input-daterange" id="schedule-date">
 			<?php echo $form->textField(
 				$model,
 				's_date',
@@ -38,7 +38,8 @@
 					'class'=>'form-control',
 					'placeholder'=>'Date',
 					'autocomplete'=>'off')); ?>
-			<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+			<span class="add-on"><span class="glyphicon glyphicon-th"></span>
+			<!--span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span-->
 		</div>
 	</div>
 	
@@ -59,10 +60,10 @@
 		<?php /* echo CHtml::link('Add Schedule', '#', array('id' => 'loadChildByAjax')); */ ?>
 	</div>
 
-	<div class="row-fluid buttons"> 
-		<a class="btn" href="#" id="loadChildByAjax"><i class="icon-list-alt"></i> Add Schedule</a>
+	<div class="buttons"> 
+		<a class="btn btn-default" href="#" id="loadChildByAjax"><span class="glyphicon glyphicon-list-alt"></span> Add Schedule</a>
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-primary')); ?>
-		<?php echo CHtml::link('<i class="icon-home"></i> Home',array('site/index'), array('class'=>'btn')); ?>
+		<?php echo CHtml::link('<span class="glyphicon glyphicon-home"></span> Home',array('site/index'), array('class'=>'btn btn-default')); ?>
 	</div>
 	
 <?php $this->endWidget(); ?>
