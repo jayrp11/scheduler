@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset=utf-8" />
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -17,9 +17,7 @@
 	</div>
   
     <div class="content">
-		<div class="row">
-			<?php echo $content; ?>
-		</div>
+		<?php echo $content; ?>
 	</div>
 	
 	<div class="footer text-center">

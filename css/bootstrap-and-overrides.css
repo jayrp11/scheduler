@@ -9,16 +9,16 @@ body {
 
 .header {
   height: 150px;
-  border-bottom: 6px solid #3276b1;
-  box-shadow: 0 0 5px 2px #aaa;
+  /* border-bottom: 6px solid #3276b1;  
+  box-shadow: 0 0 5px 2px #aaa; */
   background-color: #fff;
 }
 
 .content {
-  box-shadow: 0 0 5px 2px #aaa;
+  /* box-shadow: 0 0 5px 2px #aaa;
   min-height: 850px;
-  padding: 10px 20px 0 20px;
-  background-color: #fff;
+  padding: 10px 20px 0 20px; */
+  background-color: #fff; 
 }
 
 .footer {
@@ -91,7 +91,7 @@ body {
 }
 
 .time-frame {
-  float: left;
+/*   float: left; */
 }
 
 .time-frame div{
@@ -104,15 +104,17 @@ body {
 .time-frame div.from {
   -webkit-border-radius: 4px 4px 0 0;
   border-bottom:none;
+  width: 75px;
 }
 
 .time-frame div.to {
   -webkit-border-radius: 0 0 4px 4px;
+  width: 75px;
 }
 
 .details {
-  float: left;
-  padding-left: 15px;
+/*   float: left;
+  padding-left: 15px; */
 }
 
 .details .sub-title {
@@ -130,5 +132,9 @@ body {
 }
 
 .buttons {
-  padding-bottom: 20px;
+/*   padding-bottom: 20px; */
+}
+
+.label {
+  line-height: 2;
 }
