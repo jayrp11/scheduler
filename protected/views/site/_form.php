@@ -8,7 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'schedule-form',
-	'htmlOptions'=>array('class'=>'form-horizontal'),
+	'htmlOptions'=>array('role'=>'form'),
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -18,31 +18,27 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row-fluid">
-		<div class="span7">
+	<div class="form-group">
 			<?php echo $form->textField(
 				$model,
 				'theme',
 				array('size'=>50, 
 					'maxlength'=>50, 
-					'class'=>'input-block-level',
+					'class'=>'form-control',
 					'placeholder'=>'Title')); ?>
-		</div>
 	</div>
 
-	<div class="row-fluid">
-		<div class="span3">
-			<div class="input-append date" id="schedule-date">
-				<?php echo $form->textField(
-					$model,
-					's_date',
-					array('size'=>50, 
-						'maxlength'=>50, 
-						'class'=>'input-block-level',
-						'placeholder'=>'Date',
-						'autocomplete'=>'off')); ?>
-				<span class="add-on"><i class="icon-th"></i></span>
-			</div>
+	<div class="form-group">
+		<div class="input-group" id="schedule-date">
+			<?php echo $form->textField(
+				$model,
+				's_date',
+				array('size'=>50, 
+					'maxlength'=>50, 
+					'class'=>'form-control',
+					'placeholder'=>'Date',
+					'autocomplete'=>'off')); ?>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 		</div>
 	</div>
 	
