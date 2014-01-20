@@ -29,7 +29,7 @@
 	</div>
 
 	<div class="form-group">
-		<div class="input-daterange" id="schedule-date">
+		<div class="input-daterange input-group" id="schedule-date">
 			<?php echo $form->textField(
 				$model,
 				's_date',
@@ -38,8 +38,8 @@
 					'class'=>'form-control',
 					'placeholder'=>'Date',
 					'autocomplete'=>'off')); ?>
-			<span class="add-on"><span class="glyphicon glyphicon-th"></span>
-			<!--span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span-->
+			<!--span class="add-on"><span class="glyphicon glyphicon-th"></span-->
+			<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
 		</div>
 	</div>
 	
