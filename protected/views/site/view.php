@@ -14,7 +14,7 @@
 			</span>
 			<span class="details">
 				<div class="sub-title"></span> <?php echo CHtml::encode($subs->title) ?></div>
-				<div class="duration"><i class="icon-time"></i> <?php echo date_diff(new DateTime($subs->start_time), new DateTime($subs->end_time))->format('%i mins') ?></div>
+				<div class="duration"><i class="icon-time"></i> <?php $mins = date_diff(new DateTime($subs->start_time), new DateTime($subs->end_time)); echo ($mins->h *60) + $mins->i ?> mins</div>
 				<div class="presenter"><i class="icon-user"></i> <?php echo CHtml::encode($subs->presenter) ?></div>
 				<div class="leaded-by">Leaded by <span><?php echo CHtml::encode($subs->lead) ?></span></div>
 

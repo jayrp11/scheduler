@@ -25,5 +25,21 @@
 </table>
 
 <div class="row-fluid"> 
-	<?php echo CHtml::link('<i class="icon-th-list"></i> New Schedule',array('site/create'), array('class'=>'btn')); ?>
+	<div class="btn-group">
+		<?php echo CHtml::link('<i class="icon-th-list"></i> New Schedule',array('site/create'), array('class'=>'btn btn-default')); ?>
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span>
+			<!--span class="sr-only">Toggle Dropdown</span-->
+		</button>
+		<ul class="dropdown-menu" role="menu">
+			<?php 
+				foreach($templates->getData() as $record)
+				{
+			?>
+				<li><?php echo CHtml::link(CHtml::encode($record->theme), array('create', 'template'=>$record->id)); ?></li>
+			<?php
+				}
+			?>
+		</ul>
+	</div>
 </div>

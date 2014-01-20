@@ -5,7 +5,8 @@ use scheduler;
 create table schedules (
   id int not null auto_increment primary key,
   s_date date not null,
-  theme varchar(50) not null
+  theme varchar(50) not null,
+  is_template boolean not null default false
 );
 
 create table resources (

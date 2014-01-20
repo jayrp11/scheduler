@@ -29,10 +29,27 @@ class SiteController extends CController
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$dataProvider=new CActiveDataProvider('Schedule');
+		$dataProvider=new CActiveDataProvider('Schedule', 
+			array(
+				'criteria'=>array(
+					'condition'=>'is_template=false',
+					'order'=>'s_date DESC'
+				),
+			)
+		);
+		
+		$templates=new CActiveDataProvider('Schedule', 
+			array(
+				'criteria'=>array(
+					'condition'=>'is_template=true',
+					'order'=>'theme'
+				),
+			)
+		);
 		
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
+			'templates'=>$templates,
 		));
 	}
 	
@@ -90,11 +107,54 @@ class SiteController extends CController
 		return $sub_schedules;
 	}
 	
+	public function formatTime($schedule)
+	{
+		foreach($schedule->sub_schedules as $sub_schedule)
+		{
+			$sub_schedule->start_time=(new DateTime($sub_schedule->start_time))->format('H:i');
+			$sub_schedule->end_time=(new DateTime($sub_schedule->end_time))->format('H:i');
+		}
+	}
+	
+	public function duplicateRecord($id)
+	{
+		$schedule=new Schedule();
+		
+		$template=$this->loadModel($id);
+		
+		$schedule->theme=$template->theme;
+		
+		$ss = array();
+		foreach($template->sub_schedules as $sub_schedule)
+		{
+			$sub_model=new SubSchedule();
+			$sub_model->start_time=$sub_schedule->start_time;
+			$sub_model->end_time=$sub_schedule->end_time;
+			$sub_model->title=$sub_schedule->title;
+			$sub_model->lead=$sub_schedule->lead;
+			$sub_model->presenter=$sub_schedule->presenter;
+			
+			array_push($ss, $sub_model);
+		}
+		$schedule->sub_schedules=$ss;
+		
+		$this->formatTime($schedule);
+		
+		return $schedule;
+	}
+	
 	public function actionCreate()
 	{
 		Yii::log(serialize($_POST), CLogger::LEVEL_ERROR, '$_POST');
 		
 		$schedule=new Schedule();
+		
+		if(isset($_GET['template'])) 
+		{		
+			$schedule = $this->duplicateRecord($_GET['template']);
+			
+			Yii::log(serialize($schedule->sub_schedules), CLogger::LEVEL_ERROR, 'template');
+		}
 		
 		if(isset($_POST['Schedule']))
 		{
@@ -165,22 +225,8 @@ class SiteController extends CController
     public function actionUpdate($id)
     {
         $schedule = $this->loadModel($id);
- 
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($schedule);
- 
-        if (isset($_POST['Father']))
-        {
-            $schedule->attributes = $_POST['Father'];
-            if (isset($_POST['Child']))
-            {
-                $schedule->children = $_POST['Child'];
-            }
-            if ($schedule->saveWithRelated('children'))
-                $this->redirect(array('view', 'id' => $schedule->id));
-            else
-                $schedule->addError('children', 'Error occured while saving children.');
-        }
+		
+		$this->formatTime($schedule);
  
 		if(isset($_POST['Schedule']))
 		{
