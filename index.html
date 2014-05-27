@@ -1,0 +1,54 @@
+<html ng-app="schedular-ui">
+  <head>
+    
+  </head>
+  <body>
+    <h1>It works!</h1>
+    <div ng-controller="SchedulesController">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Theme</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeate="schedule in schedules">
+            <td>{{ schedule.occurs_on }}</td>
+            <td>{{ schedule.theme }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="js/lodash.compat.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/restangular.js"></script>
+
+    <script type="text/javascript">
+
+      var app = angular.module("schedular-ui", [ 'restangular' ]);
+
+      app.config(function(RestangularProvider) {
+        RestangularProvider.setBaseUrl("http://localhost:3000");
+      });
+
+      app.controller("SchedulesController", function($scope) {
+        var schedules = [
+          {
+            "id" : 123,
+            "occurs_on" : "2012-05-27",
+            "theme": "test"
+          }
+        ];
+        $scope.schedules = schedules;
+        /*
+        var schedules = Restangular.all("schedules");
+        schedules.getList().then(function($schedules) {
+          $scope.schedules = $schedules;
+        });
+        */
+      });
+
+    </script>
+  </body>
+</html>
