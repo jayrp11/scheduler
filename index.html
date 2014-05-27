@@ -13,7 +13,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeate="schedule in schedules">
+          <tr ng-repeat="schedule in schedules">
             <td>{{ schedule.occurs_on }}</td>
             <td>{{ schedule.theme }}</td>
           </tr>
@@ -32,22 +32,12 @@
         RestangularProvider.setBaseUrl("http://localhost:3000");
       });
 
-      app.controller("SchedulesController", function($scope) {
-        var schedules = [
-          {
-            "id" : 123,
-            "occurs_on" : "2012-05-27",
-            "theme": "test"
-          }
-        ];
-        $scope.schedules = schedules;
-        /*
+      app.controller("SchedulesController", ['$scope', "Restangular", function($scope, Restangular) {
         var schedules = Restangular.all("schedules");
         schedules.getList().then(function($schedules) {
           $scope.schedules = $schedules;
         });
-        */
-      });
+      }]);
 
     </script>
   </body>

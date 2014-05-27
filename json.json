@@ -1,0 +1,11 @@
+{
+  "schedules" : [
+    
+          {
+            "id" : 123,
+            "occurs_on" : "2012-05-27",
+            "theme": "test"
+
+          }
+    ]
+}
