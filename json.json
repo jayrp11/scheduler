@@ -1,11 +1,31 @@
 {
-  "schedules" : [
-    
-          {
-            "id" : 123,
-            "occurs_on" : "2012-05-27",
-            "theme": "test"
-
-          }
-    ]
+	"schedules" : [
+	{
+		"id" : 123,
+		"occurs_on" : "2012-05-27",
+		"theme": "test"
+	}
+	],
+	"sub_schedules" : [
+	{
+		"id" : 1,
+		"scheduleID" : 123,
+		"title" : "Sub One 1",
+		"start_time" : "2012-05-27T18:00:00+0100",
+		"end_time" : "2012-05-27T18:00:00+0100",
+		"presenter" : "Test presenter - 1",
+		"lead" : "Test lead - 1",
+		"resources" : "resources-1, resources-2"
+	},
+	{
+		"id" : 2,
+		"scheduleID" : 123,
+		"title" : "Sub One 2",
+		"start_time" : "2012-05-27T18:30:00+0100",
+		"end_time" : "2012-05-27T20:00:00+0100",
+		"presenter" : "Test presenter - 2",
+		"lead" : "Test lead - 2",
+		"resources" : "resources-3, resources-3"
+	}
+	]
 }

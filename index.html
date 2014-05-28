@@ -5,22 +5,6 @@
   <body>
     <h1>It works!</h1>
     <div ng-view></div>
-    <!--<div ng-controller="SchedulesController">
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Theme</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="schedule in schedules">
-            <td>{{ schedule.occurs_on }}</td>
-            <td>{{ schedule.theme }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>-->
     <script type="text/javascript" src="js/lodash.compat.js"></script>
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/angular-route.min.js"></script>
@@ -28,28 +12,41 @@
 
     <script type="text/javascript">
 
-      var app = angular.module("schedular-ui", [ 'ngRoute', 'restangular' ]);
+      var app = angular.module('schedular-ui', [ 'ngRoute', 'restangular' ]);
 
       app.config(function(RestangularProvider) {
-        RestangularProvider.setBaseUrl("http://localhost:3000");
+        RestangularProvider.setBaseUrl('http://localhost:3000');
       });
 
       app.config(['$routeProvider', function($routeProvider) {
-          $routeProvider
-            .when('/',
-              {
-                controller: 'SchedulesController',
-                templateUrl: "schedules.html"
-                })
-            .otherwise({
-              redirectTo: '/'
-              });
+        $routeProvider
+          .when('/schedules',
+            {
+              controller: 'SchedulesController',
+              templateUrl: 'schedules.html'
+            })
+          .when('/schedules/:schedule_id/sub_schedule',
+            {
+              controller: 'SubSchedulesController',
+              templateUrl: 'sub_schedules.html'
+            })
+          .otherwise(
+            {
+              redirectTo: '/schedules'
+            });
       }]);
 
-      app.controller("SchedulesController", ['$scope', "Restangular", function($scope, Restangular) {
-        var schedules = Restangular.all("schedules");
+      app.controller('SchedulesController', ['$scope', 'Restangular', function($scope, Restangular) {
+        var schedules = Restangular.all('schedules');
         schedules.getList().then(function($schedules) {
           $scope.schedules = $schedules;
+        });
+      }]);
+
+      app.controller('SubSchedulesController', ['$scope', '$routeParams', 'Restangular', function($scope, $routeParams, Restangular) {
+        var sub_schedules = Restangular.all('sub_schedules');
+        sub_schedules.getList().then(function($sub_schedules) {
+          $scope.sub_schedules = $sub_schedules;
         });
       }]);
 
