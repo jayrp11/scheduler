@@ -1,0 +1,25 @@
+<div> 
+  <div>{{ schedule.theme }}</div>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Start time</th>
+        <th>End time</th>
+        <th>Presenter</th>
+        <th>Lead</th>
+        <th>Resources</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="sub_schedule in schedule.sub_schedules" >
+        <td>{{ sub_schedule.title }}</td>
+        <td>{{ sub_schedule.start_time }}</td>
+        <td>{{ sub_schedule.end_time }}</td>
+        <td>{{ sub_schedule.presenter }}</td>
+        <td>{{ sub_schedule.lead }}</td>
+        <td>{{ sub_schedule.resources }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

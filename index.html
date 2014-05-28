@@ -22,13 +22,13 @@
         $routeProvider
           .when('/schedules',
             {
-              controller: 'SchedulesController',
+              controller: 'ScheduleListController',
               templateUrl: 'schedules.html'
             })
-          .when('/schedules/:schedule_id/sub_schedule',
+          .when('/schedules/:scheduleId',
             {
-              controller: 'SubSchedulesController',
-              templateUrl: 'sub_schedules.html'
+              controller: 'ScheduleDetailController',
+              templateUrl: 'schedulesDetail.html'
             })
           .otherwise(
             {
@@ -36,15 +36,22 @@
             });
       }]);
 
-      app.controller('SchedulesController', ['$scope', 'Restangular', function($scope, Restangular) {
+      app.controller('ScheduleListController', ['$scope', 'Restangular', function($scope, Restangular) {
         var schedules = Restangular.all('schedules');
         schedules.getList().then(function($schedules) {
           $scope.schedules = $schedules;
         });
       }]);
 
+      app.controller('ScheduleDetailController', ['$scope', '$routeParams', 'Restangular', function($scope, $routeParams, Restangular) {
+        var schedule = Restangular.one('schedules/' + $routeParams.scheduleId);
+        schedule.get().then(function($schedule) {
+          $scope.schedule = $schedule;
+        });
+      }]);
+
       app.controller('SubSchedulesController', ['$scope', '$routeParams', 'Restangular', function($scope, $routeParams, Restangular) {
-        var sub_schedules = Restangular.all('sub_schedules');
+        var sub_schedules = Restangular.all('schedules/sub_schedules');
         sub_schedules.getList().then(function($sub_schedules) {
           $scope.sub_schedules = $sub_schedules;
         });

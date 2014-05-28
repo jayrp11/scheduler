@@ -7,8 +7,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="schedule in schedules">
-        <td>{{ schedule.occurs_on }}</td>
+      <tr ng-repeat="schedule in schedules" >
+        <td><a href="#/schedules/{{ schedule.id }}">{{ schedule.occurs_on }}</a></td>
         <td>{{ schedule.theme }}</td>
       </tr>
     </tbody>
