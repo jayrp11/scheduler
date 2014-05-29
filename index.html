@@ -1,6 +1,6 @@
 <html ng-app="schedular-ui">
   <head>
-    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen, projection" />
   </head>
   <body>
     <h1>It works!</h1>
@@ -9,54 +9,7 @@
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/angular-route.min.js"></script>
     <script type="text/javascript" src="js/restangular.js"></script>
-
-    <script type="text/javascript">
-
-      var app = angular.module('schedular-ui', [ 'ngRoute', 'restangular' ]);
-
-      app.config(function(RestangularProvider) {
-        RestangularProvider.setBaseUrl('http://localhost:3000');
-      });
-
-      app.config(['$routeProvider', function($routeProvider) {
-        $routeProvider
-          .when('/schedules',
-            {
-              controller: 'ScheduleListController',
-              templateUrl: 'schedules.html'
-            })
-          .when('/schedules/:scheduleId',
-            {
-              controller: 'ScheduleDetailController',
-              templateUrl: 'schedulesDetail.html'
-            })
-          .otherwise(
-            {
-              redirectTo: '/schedules'
-            });
-      }]);
-
-      app.controller('ScheduleListController', ['$scope', 'Restangular', function($scope, Restangular) {
-        var schedules = Restangular.all('schedules');
-        schedules.getList().then(function($schedules) {
-          $scope.schedules = $schedules;
-        });
-      }]);
-
-      app.controller('ScheduleDetailController', ['$scope', '$routeParams', 'Restangular', function($scope, $routeParams, Restangular) {
-        var schedule = Restangular.one('schedules/' + $routeParams.scheduleId);
-        schedule.get().then(function($schedule) {
-          $scope.schedule = $schedule;
-        });
-      }]);
-
-      app.controller('SubSchedulesController', ['$scope', '$routeParams', 'Restangular', function($scope, $routeParams, Restangular) {
-        var sub_schedules = Restangular.all('schedules/sub_schedules');
-        sub_schedules.getList().then(function($sub_schedules) {
-          $scope.sub_schedules = $sub_schedules;
-        });
-      }]);
-
-    </script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
