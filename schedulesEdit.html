@@ -1,0 +1,13 @@
+<form class="form-horizontal">
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder="Theme" ng-model="schedule.theme">
+	</div>
+    <div class="input-group">
+      <input type="text" class="form-control" datepicker-popup="dd-MM-yyyy" ng-model="schedule.occurs_on" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+      </span>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="submit()">Add Schedule</button>
+    <button type="submit" class="btn btn-primary" ng-click="submit()">Save</button>
+</form>
