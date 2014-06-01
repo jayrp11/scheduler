@@ -1,7 +1,7 @@
 var app = angular.module('schedular-ui', [ 'ngRoute', 'restangular', 'ui.bootstrap' ]);
 
 app.config(function(RestangularProvider) {
-  RestangularProvider.setBaseUrl('http://localhost:3000');
+  RestangularProvider.setBaseUrl('http://localhost/scheduler-api/');
 });
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -25,6 +25,11 @@ app.config(['$routeProvider', function($routeProvider) {
       {
         controller: 'ScheduleEditController',
         templateUrl: 'schedulesEdit.html'
+      })
+    .when('/schedules/:scheduleId/sub_schedule/new',
+      {
+        controller: 'SubScheduleNewController',
+        templateUrl: 'sub_scheduleNew.html'
       })
     .otherwise(
       {
@@ -68,9 +73,25 @@ app.controller('ScheduleNewController', ['$scope', '$location', 'Restangular', f
   };
 }]);
 
-app.controller('ScheduleEditController', ['$scope', '$routeParams', 'Restangular', function($scope, $routeParams, Restangular) {
+app.controller('ScheduleEditController', ['$scope', '$location', '$routeParams', 'Restangular', function($scope, $location, $routeParams, Restangular) {
   var schedule = Restangular.one('schedules/' + $routeParams.scheduleId);
   schedule.get().then(function($schedule) {
     $scope.schedule = $schedule;
   });
+
+  $scope.addSubSchedule = function($schedule) {
+    $location.path('/schedules/' + $schedule.id + '/sub_schedule/new');
+  }
+}]);
+
+app.controller('SubScheduleNewController', ['$scope', '$location', '$routeParams', 'Restangular', function($scope, $location, $routeParams, Restangular) {
+  var schedule = Restangular.one('schedules/' + $routeParams.scheduleId);
+
+  $scope.submit = function() {
+    schedule.all('sub_schedules').post($scope.sub_schedule).then(function($sub_schedule) {
+      console.log($sub_schedule.id);
+    }, function() {
+      console.log("Error");
+    });
+  };
 }]);
