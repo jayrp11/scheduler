@@ -104,6 +104,7 @@ app.controller('SubScheduleNewController', ['$scope', '$location', '$routeParams
   $scope.submit = function() {
     schedule.all('sub_schedules').post($scope.sub_schedule).then(function($sub_schedule) {
       console.log($sub_schedule.id);
+      $location.path('/schedules/' + $sub_schedule.schedule_id + '/edit');
     }, function() {
       console.log("Error");
     });
