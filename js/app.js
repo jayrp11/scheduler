@@ -1,4 +1,4 @@
-var app = angular.module('schedular-ui', [ 'ngRoute', 'restangular', 'ui.bootstrap' ]);
+var app = angular.module('schedular-ui', [ 'ngRoute', 'restangular', 'ui.bootstrap', 'checklist-model' ]);
 
 app.config(function(RestangularProvider) {
   RestangularProvider.setBaseUrl('http://localhost/scheduler-api/');
@@ -101,6 +101,10 @@ app.controller('ScheduleEditController', ['$scope', '$location', '$routeParams',
 app.controller('SubScheduleNewController', ['$scope', '$location', '$routeParams', 'Restangular', function($scope, $location, $routeParams, Restangular) {
   var schedule = Restangular.one('schedules', $routeParams.scheduleId);
 
+  Restangular.all('assets').getList().then(function($resources) {
+    $scope.resources = $resources;
+  });
+  
   $scope.submit = function() {
     schedule.all('sub_schedules').post($scope.sub_schedule).then(function($sub_schedule) {
       console.log($sub_schedule.id);
@@ -113,9 +117,13 @@ app.controller('SubScheduleNewController', ['$scope', '$location', '$routeParams
 
 app.controller('SubScheduleEditController', ['$scope', '$location', '$routeParams', 'Restangular', function($scope, $location, $routeParams, Restangular) {
   var sub_schedule = Restangular.one('schedules', $routeParams.scheduleId).one('sub_schedules', $routeParams.sub_scheduleId);
-  //Restangular.one('schedules/' + $routeParams.scheduleId + '/sub_schedules/' + $routeParams.sub_scheduleId);
+  
   sub_schedule.get().then(function($sub_schedule) {
     $scope.sub_schedule = $sub_schedule;
+  });
+
+  Restangular.all('assets').getList().then(function($resources) {
+    $scope.resources = $resources;
   });
 
   $scope.edit = function() {

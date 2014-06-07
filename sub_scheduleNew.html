@@ -15,6 +15,11 @@
 		<input type="text" class="form-control" placeholder="Lead" ng-model="sub_schedule.lead">
 	</div>
 	<div class="form-group">
+		<label class="checkbox-inline" ng-repeat="resource in resources">
+			<input type="checkbox" checklist-model="sub_schedule.resources" checklist-value="resource.id"> {{ resource.name }}
+		</label>
+	</div>
+	<div class="form-group">
 		<button type="submit" class="btn btn-primary" ng-click="submit()">Create</button>
 	</div>
 </form>
