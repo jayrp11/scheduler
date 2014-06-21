@@ -4,8 +4,21 @@ app.config(function(RestangularProvider) {
   RestangularProvider.setBaseUrl('http://localhost/scheduler-api/');
 });
 
+app.run(['Restangular', '$location', function(Restangular, $location) {
+  Restangular.setErrorInterceptor(function(response, deferred, responseHandler) {
+    if(response.status === 401) {
+      $location.path('/auth');
+      return false; // error handled
+    }
+
+    return true; // error not handled
+  });
+}]);
+
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
+    .when('/auth',
+      { controller: 'AuthController',   templateUrl: 'auth.html' })
     .when('/schedules',
       { controller: 'ScheduleListController',   templateUrl: 'schedules.html' })
 
@@ -26,6 +39,17 @@ app.config(['$routeProvider', function($routeProvider) {
 
     .otherwise(
       { redirectTo: '/schedules' });
+}]);
+
+app.controller('AuthController', ['$scope', '$location', 'Restangular', function($scope, $location, Restangular) {
+  $scope.validate = function() {
+    Restangular.all('auth/validate').post($scope.auth).then(function($auth) {
+      console.log($auth.username);
+      $location.path('/schedules');
+    }, function() {
+      console.log("Error");
+    });
+  };
 }]);
 
 app.controller('ScheduleListController', ['$scope', '$location', 'Restangular', function($scope, $location, Restangular) {

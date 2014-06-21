@@ -35,7 +35,8 @@ create table sub_schedules_resources (
   CONSTRAINT fk_resource FOREIGN KEY (resource_id) REFERENCES resources(id)
 );
 
-
-
-
-
+create table users (
+  id int not null auto_increment primary key,
+  username varchar(50),
+  password varchar(100)
+);
