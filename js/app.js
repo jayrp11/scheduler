@@ -19,6 +19,8 @@ app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/auth',
       { controller: 'AuthController',   templateUrl: 'auth.html' })
+    .when('/logout',
+      { controller: 'LogoutController',   templateUrl: 'auth.html' })
     .when('/schedules',
       { controller: 'ScheduleListController',   templateUrl: 'schedules.html' })
 
@@ -41,9 +43,19 @@ app.config(['$routeProvider', function($routeProvider) {
       { redirectTo: '/schedules' });
 }]);
 
+app.controller('LogoutController', ['$scope', '$location', 'Restangular', function($scope, $location, Restangular) {
+  console.log('logout controller')
+  Restangular.all('simpleauth/logout').post($scope.auth).then(function($auth) {
+    console.log($auth.username);
+    $location.path('/schedules');
+  }, function() {
+    console.log("Error");
+  });
+}]);
+
 app.controller('AuthController', ['$scope', '$location', 'Restangular', function($scope, $location, Restangular) {
   $scope.validate = function() {
-    Restangular.all('auth/validate').post($scope.auth).then(function($auth) {
+    Restangular.all('simpleauth/auth').post($scope.auth).then(function($auth) {
       console.log($auth.username);
       $location.path('/schedules');
     }, function() {
